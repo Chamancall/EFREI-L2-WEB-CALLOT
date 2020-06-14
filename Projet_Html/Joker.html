@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>Joker</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<style type="text/css">
+	body {
+		background: url(bg.png) no-repeat center center fixed;
+  background-size: 100% 100%;
+  	}	
+  	.fighto {
+  		height: 100%;
+  		width: 50%;
+  	}
+  	.masko {
+  		height: 180px;
+  		width: auto;
+  		margin-left: 30%;
+  	}
+  	.lefto {
+  		 bottom: -200px;
+    position: fixed;
+    height: 100%;
+    width: auto;
+}
+  	.rotate-vert-center {
+	-webkit-animation: rotate-vert-center 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: rotate-vert-center 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+#sun {
+	left: 10px;
+}
+
+#time:hover {
+	cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<header>
+	<ul class="up">
+		<li><a id="one" href='Accueil.html'>Home Page</a></li>
+			<li><a id="two" href='Joker.html'>Joker</a></li>
+			<li><a id="three" href="Morgana.html">Morgana</a></li>
+			<li><a id="four" href="Mementos.html">Mementos</a></li>
+			<li><a id="five" href="Velvet Room.html">Velvet Room</a></li>
+			<li><a id="six" href="Your Phantom thief.html">Your page</a></li>
+			<li style="float:right"><a id="seven" href="Qui sommes nous.html">About us</a></li>
+	</ul>
+	<img class="masko rotate-vert-center" id="time" src="time.png">
+	<img id="sun" src="sic.png">
+</header>
+<section>
+	<audio src="JTheme.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
+	<div style="display: flex;">
+		<img class="lefto" style='opacity: 0.5;' src="Arsene.png">
+		<p style="max-width: 50%; padding-left: 20px;padding-top: 20px;" class="break-long-words"><span style="font-size: 40px;">"Yes, before this happens, we will take this country!"</span><br><br><span style="font-size: 20px;">Ren Amamiya, also known as Joker or the Phantom Joker, is a character from Persona 5 and the proganist that the player will follow through the game. Even if he unfolds a silent and indifferent personnality, he is portrayed several times in the game as a confident and even cheeky person.<br>After being falsely accused for assault by a high-profile politician, he will end up with a one-year probation sentence. He will then be transfered to Shujin Academy in Tokyo as a second-year student where he will meet the rest of the cast.<br>Thanks to a strange phone application, Joker can be transported in the Metaverse, a dimension between dreams and reality where he will awaken Arsène, his initial Persona which is a humanoid creature that is the manifestation of someone's true self, with whom he will explore Palaces, places containing peoples' negatives thoughts in order to change society as the leader of the Phantom thieves of heart</span></p>
+	</div>
+</section>
+<footer>
+	<img class="fighto" src="ren.png">
+	<div class="pied">Valérian Callot 2020 | <a href="Qui sommes nous.html">About us</a></div>
+</footer>
+</body>
+<script type="text/javascript">
+var table = 2;
+var element = document.getElementById("time");
+
+element.addEventListener("click", function(e){
+  e.preventDefault;
+  element.classList.remove("rotate-vert-center");
+  void element.offsetWidth;
+  element.classList.add("rotate-vert-center");
+}, false);
+
+
+</script>
+<script typr="text/javascript" src="app.js"></script>
+</html>

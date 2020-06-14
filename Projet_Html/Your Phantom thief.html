@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>Create your page !</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<style type="text/css">
+	body {
+  background: url(night.png) no-repeat center center fixed;
+  background-size: 100% 100%;
+}
+.masko {
+	margin-bottom: 10px;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  max-height: 300px;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  -webkit-animation-name: fadeIn; 
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+.modal-content {
+	max-height: 400px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	color: white;
+	width: 96%;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  right: 10%;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+	text-align: center;
+  padding: 0px 16px;
+  color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+	min-width: 60%;
+	background-color: red;
+}
+
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+form {
+	background-color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 5px solid red;
+	border-bottom: 5px solid red;
+}
+
+button, select{
+	border: none;
+	min-width: 150px;
+	padding: 3px;
+	margin-top: 5px;
+	margin-left: 3px;
+	background-color: white;
+}
+input {
+	min-width: 30px;
+	border: none;
+	padding: 3px;
+	margin-top: 5px
+	margin-left: 3px;
+}
+
+</style>
+</head>
+<body>
+<header>
+	<ul class="up" id="hed">
+		<li><a id="one" href='Accueil.html'>Home Page</a></li>
+			<li><a id="two" href='Joker.html'>Joker</a></li>
+			<li><a id="three" href="Morgana.html">Morgana</a></li>
+			<li><a id="four" href="Mementos.html">Mementos</a></li>
+			<li><a id="five" href="Velvet Room.html">Velvet Room</a></li>
+			<li><a id="six" href="Your Phantom thief.html">Your page</a></li>
+			<li style="float:right"><a id="seven" href="Qui sommes nous.html">About us</a></li>
+	</ul>
+	<img class="masko" id="milieu" src="phantom.png">
+	<img id="sun" src="moon.gif">
+</header>
+<section id="Main">
+	<audio src="Beneath.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
+	<form id="formulaire">
+		<div style="text-align: center;">
+			<button id="jour" onclick="dayBackground()" type="button">Day Time</button>
+			<textarea type="text" style="text-align: center; min-width: 50%;" id="paragrap" name="prenom" placeholder="Enter what you want to add"></textarea>
+			<button id="nuit" onclick="nightBackground()" type="button">Night Time</button>
+		</div>
+		<div style="text-align: center;">
+				<input type="radio" name="fonts" id="arial"><span style="font-family: Arial;">Arial</span>
+	  			<input type="radio" name="fonts" id="persona1"><span style="font-family: 'p5hattyregular';">P5hatty</span>
+	  			<input type="radio" name="fonts" id="persona2"><span style="font-family: 'personaregular';">Persona</span>
+	  			<input type="radio" name="fonts" id="persona3"><span style="font-family: 'earwig_factoryregular';">Earwig Factory</span>
+	  			<button onclick="Paragraphe()" type="button"><img style="height: 20px; width: 20px;" src="write.png"></span>Create a paragraph</button>
+	  			<input type="radio" name="sizes" id="taille1"><span style="font-size: 15pt;">15pt</span>
+	  			<input type="radio" name="sizes" id="taille2"><span style="font-size: 20pt;">20pt</span>
+	  			<input type="radio" name="sizes" id="taille3"><span style="font-size: 30pt;">30pt</span>
+	  			<input type="radio" name="sizes" id="taille4"><span style="font-size: 40pt;">40pt</span>
+	  	</div>
+  		<div style="text-align: center;">
+			<input type="text" style="text-align: center;" id="couleur" name="prenom" placeholder="Enter color">
+			<button onclick="colorBackground()" type="button">Change the Background Color</button>
+			<select id="role" name="fonction" required>
+                <option value="ens">Default</option>
+                <option value="etu">Take your heart</option>
+                <option value="etu">Take your time</option>
+                <option value="etu">Morgana</option>
+                <option value="etu">Velvet Room</option>
+            </select>
+            <button onclick="logoBackground()" type="button">Change the Logo</button>
+        </div>
+        <div style="text-align: center;">
+            <button onclick="logoTransp()" type="button">Remove the Logo Backgroung</button>
+            <button onclick="logoBlanc()" type="button">Add the Logo Backgroung</button>
+		</div>
+		<div style="text-align: center;">
+			<select id="sound" name="fonction" required>
+				<option value="ens">Beneath the Mask</option>
+				<option value="etu">Tokyo Daylight</option>
+				<option value="etu">Victory !</option>
+				<option value="etu">Alleycat</option>
+				<option value="etu">Aria of the soul</option>
+				<option value="etu">Swear to my Bones</option>
+				<option value="etu">Rivers in the desert</option>
+				<option value="etu">Last Surprise</option>
+				<option value="etu">Colors Flying High</option>
+				<option value="etu">Memento's Depths</option>
+			</select>
+			<button onclick="musicChange()" type="button">Change the Music</button>
+        </div>
+	</form>
+	<button onclick="hideInterface()" type="button">Hide/Show Interface</button>
+
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span id='Fermer' class="close">&times;</span>
+				<img style="max-height: 100%; max-width: 100%; position: relative;" src="Ryuji.png">
+			</div>
+			<div class="modal-body">
+				<h1 style="font-family:'p5hattyregular'; font-size: 50px;">Hey ! Ryuji here !</h1>
+				<p style="font-family:'p5hattyregular'; font-size: 30px;">We have this page but we don't know what to do with it. Why don't you try some things and custom it?</p>
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="pied" id='foo'>Valérian Callot 2020 | <a href="Qui sommes nous.html">About us</a></div>
+</footer>
+</body>
+
+<script type="text/javascript">
+var table = 6;
+
+function dayBackground() {
+	document.body.style.backgroundColor = "#00BFFF";
+	document.body.style.backgroundImage = "url('day.png')";
+	var icone = document.getElementById('sun');
+	icone.src = "sun.gif";
+}
+
+function nightBackground() {
+  document.body.style.backgroundColor = "#f3f3f3";
+  document.body.style.backgroundImage = "url('night.png')";
+  var icone = document.getElementById('sun');
+  icone.src = "moon.gif";
+}
+
+function Paragraphe() {
+	let whatawant = document.getElementById("paragrap").value;
+	if (whatawant == '') {
+
+	} else {
+		var x = document.createElement("P");
+	var t = document.createTextNode(whatawant);
+	x.appendChild(t);
+	x.className = "oui";
+	if (document.getElementById("arial").checked == true) {
+		x.style.fontFamily = "Arial";
+	} else if (document.getElementById("persona1").checked == true) {
+		x.style.fontFamily = "p5hattyregular";
+	} else if (document.getElementById("persona2").checked == true) {
+		x.style.fontFamily = "personaregular";
+	} else if (document.getElementById("persona3").checked == true) {
+		x.style.fontFamily = "earwig_factoryregular";
+	}
+	if (document.getElementById("taille1").checked == true) {
+		x.style.fontSize = "15pt";
+	} else if (document.getElementById("taille2").checked == true) {
+		x.style.fontSize = "20pt";
+	} else if (document.getElementById("taille3").checked == true) {
+		x.style.fontSize = "30pt";
+	} else if (document.getElementById("taille4").checked == true) {
+		x.style.fontSize = "40pt";
+	}
+	document.getElementById("Main").appendChild(x);
+	document.getElementById('paragrap').value = '';
+	}
+}
+
+var modal = document.getElementById("myModal");
+function Ryuji(){
+	modal.style.display = "block";
+}
+
+window.onload = Ryuji();
+
+var booton = document.getElementById("Fermer");
+booton.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function colorBackground() {
+	let whatcolor = document.getElementById("couleur").value;
+	var tete = document.getElementById("hed");
+	var pied = document.getElementById("foo");
+	var form = document.getElementById("formulaire");
+	if (whatcolor == '') {
+
+	} else {
+	tete.style.backgroundColor = whatcolor;
+	pied.style.backgroundColor = whatcolor;
+	form.style.borderColor = whatcolor;
+	document.getElementById('couleur').value = '';
+	}
+}
+
+function logoBackground() {
+	var x = document.getElementById("role");
+    var i = x.selectedIndex;
+    if (i == 0) {
+    	var ima = document.getElementById('milieu');
+ 		ima.src = "phantom.png";
+    } else if (i == 1) {
+    	var ima = document.getElementById('milieu');
+ 		ima.src = "heart.png";
+    } else if (i == 2) {
+    	var ima = document.getElementById('milieu');
+ 		ima.src = "time.png";   	
+    } else if (i == 3) {
+    	var ima = document.getElementById('milieu');
+ 		ima.src = "meow.png";    	
+    } else if (i == 4) {
+    	var ima = document.getElementById('milieu');
+ 		ima.src = "velvetlogo.png";    	
+    }
+}
+
+function hideInterface(){
+	var x = document.getElementById("formulaire");
+	if (x.style.display === "block") {
+		x.style.display = "none";
+	} else {
+		x.style.display = "block";
+	}
+}
+
+function logoTransp(){
+	document.getElementById('milieu').style.backgroundColor = "transparent";
+}
+
+function logoBlanc() {
+	document.getElementById('milieu').style.backgroundColor = "white";
+}
+
+function musicChange() {
+	var x = document.getElementById("sound");
+    var i = x.selectedIndex;
+    if (i == 0) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "Beneath.mp3";
+    } else if (i == 1) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "daylight.mp3";
+    } else if (i == 2) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "JTheme.mp3";   	
+    } else if (i == 3) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "Alleycat.mp3";
+    } else if (i == 4) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "Aria.mp3";   	
+    } else if (i == 5) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "Bones.mp3";   	
+    } else if (i == 6) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "Rivers.mp3";   	
+    } else if (i == 7) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "Surprise.mp3";   	
+    } else if (i == 8) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "Flying.mp3";   	
+    } else if (i == 9) {
+    	var musique = document.getElementById('myAudio');
+	musique.src = "Depths.mp3";   	
+    }
+}
+
+</script>
+<script typr="text/javascript" src="app.js"></script>
+</html>

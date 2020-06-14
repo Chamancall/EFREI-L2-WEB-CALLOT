@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>Mementos</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<style type="text/css">
+
+	body {
+  background: url(mementos.png) no-repeat center center fixed;
+  background-size: 100% 100%;
+}
+
+section {
+	min-height: 570px;
+}
+
+#myBtn {
+	max-width: 5%;
+	max-height: auto;
+	background-color: white;
+	border: 5px solid red;
+	border-radius: 10px;
+	position: fixed;
+	left: 30%;
+	top: 30%;
+}
+
+#myBtn2 {
+	max-width: 5%;
+	max-height: auto;
+	background-color: white;
+	border: 5px solid red;
+	border-radius: 10px;
+	position: fixed;
+	left: 60%;
+	top: 50%;
+}
+
+#myBtn3 {
+	max-width: 5%;
+	max-height: auto;
+	background-color: white;
+	border: 5px solid red;
+	border-radius: 10px;
+	position: fixed;
+	left: 50%;
+	top: 80%;
+}
+
+.close2 {
+  color: black;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+  top: 10px;
+}
+
+.close2:hover,
+.close2:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close3 {
+  color: black;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+  top: 10px;
+}
+
+.close3:hover,
+.close3:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.butto:hover {
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<header>
+	<ul class="up">
+		<li><a id="one" href='Accueil.html'>Home Page</a></li>
+			<li><a id="two" href='Joker.html'>Joker</a></li>
+			<li><a id="three" href="Morgana.html">Morgana</a></li>
+			<li><a id="four" href="Mementos.html">Mementos</a></li>
+			<li><a id="five" href="Velvet Room.html">Velvet Room</a></li>
+			<li><a id="six" href="Your Phantom thief.html">Your page</a></li>
+			<li style="float:right"><a id="seven" href="Qui sommes nous.html">About us</a></li>
+	</ul>
+	<img id="sun" src="Metanav.png">
+</header>
+
+<section>
+	<audio src="Depths.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
+	<img  id="myBtn" class="butto" src="reaper.png">
+	<img  id="myBtn2" class="butto" src="Yoshitsune.png">
+	<img  id="myBtn3" class="butto" src="final.png">
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img style="top: 10px; max-height: 100%; max-width: 100%; position: relative;" src="reaper.png">
+    <p style="font-family:'earwig_factoryregular'; font-size: 40px; width: 100%; color: white;" class="break-long-words">The Reaper<span style="font-family: 'p5hattyregular'; font-size: 30px; color: white; font-weight: bolder;"> is a boss from the Persona series. Instead of the regular reaper scythe, he wields two revolvers. It appears when the player stays in the same place for too much time or at chest locations. It is one of the most famous boss because of its high stats, panel of attacks and difficulty.</span> </p>
+  </div>
+</div>
+
+<div id="myModal2" class="modal">
+  <div class="modal-content">
+    <span class="close2">&times;</span>
+    <img style="top: 10px; max-height: 100%; max-width: 100%; position: relative;" src="Yoshitsune.png">
+    <p style="font-family:'earwig_factoryregular'; font-size: 40px; width: 100%; color: white;" class="break-long-words">Shadow Minamoto<span style="font-size: 10px; font-family: 'p5hattyregular'; font-size: 30px; color: white; font-weight: bolder;"> is an optional boss that can be fought in Mementos. It have the same appearance as Yoshitsune, considered to be the strongest Persona in the game which is able to make a character almost invincible.</span></p>
+  </div>
+</div>
+
+<div id="myModal3" class="modal">
+  <div class="modal-content">
+    <span class="close3">&times;</span>
+    <img style="top: 10px; max-height: 100%; max-width: 100%; position: relative;" src="final.png">
+    <p style="font-family:'earwig_factoryregular'; font-size: 40px; width: 100%; color: white;" class="break-long-words">The Bottom of Mementos<span style="font-size: 30px; font-family: 'p5hattyregular'; font-size: 30px; color: white; font-weight: bolder;"> is only accessible after the completion of the 10th precedent floors. What is at the bottom is unknown but contains great power.</span></p>
+  </div>
+</div>
+
+</section>
+<footer>
+	<div class="pied">Valérian Callot 2020 | <a href="Qui sommes nous.html">About us</a></div>
+</footer>
+</body>
+<script type="text/javascript">
+var table = 4;
+
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+  btn.style.display = "none";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+  btn.style.display = "block";
+}
+
+var modal2 = document.getElementById("myModal2");
+var btn2 = document.getElementById("myBtn2");
+var span2 = document.getElementsByClassName("close2")[0];
+
+btn2.onclick = function() {
+  modal2.style.display = "block";
+  btn2.style.display = "none";
+}
+
+span2.onclick = function() {
+  modal2.style.display = "none";
+  btn2.style.display = "block";
+}
+
+var modal3 = document.getElementById("myModal3");
+var btn3 = document.getElementById("myBtn3");
+var span3 = document.getElementsByClassName("close3")[0];
+
+btn3.onclick = function() {
+  modal3.style.display = "block";
+  btn3.style.display = "none";
+}
+
+span3.onclick = function() {
+  modal3.style.display = "none";
+  btn3.style.display = "block";
+}
+</script>
+<script typr="text/javascript" src="app.js"></script>
+</html>

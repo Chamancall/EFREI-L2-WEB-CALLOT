@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+
+</head>
+<header>
+	<div class="mask"></div>
+	<img id="sun" src="sunny.gif">
+</header>
+<body class="im">
+<audio src="daylight.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
+	<p>le lien pour le TP est <a href="TP1_Callot">TP1Callot.html</a></p>
+	<p>a</p>
+	<p>a</p>
+	<p>a</p>
+	<p>a</p>
+	<p>a</p><p>a</p>
+	<p>a</p>
+	<p>a</p>
+</body>
+<footer>
+<script type="text/javascript">
+var muse = document.getElementById("myAudio"); 
+var sunny = document.getElementById("sun");
+
+function Music(){
+    muse.style.display = "none";
+}
+
+window.onload = Music();
+
+sunny.onclick = function(){
+  if (muse.paused) {
+        muse.play();
+        }
+    else  {
+        muse.pause(); 
+        }
+}
+
+</script>
+</footer>
+</html>

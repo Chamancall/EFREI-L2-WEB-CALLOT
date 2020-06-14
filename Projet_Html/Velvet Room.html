@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>Hey Inmate !</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<style type="text/css">
+
+ul {
+	background-color: purple;
+}
+
+section {
+	min-height: 560px;
+}
+
+.pied {
+	background-color: purple;
+}
+
+body {
+	background-image: url('chains.png');
+ 	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: 100% 100%;
+  	background-position: bottom;
+  	background-color: blue;
+  	transition-duration: 0.5;
+}
+#fighto{
+	height: 120%;
+	width: auto;
+	bottom: -200px;
+}
+#lefto{
+	height: 120%;
+	width: auto;
+	bottom: -200px;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+.modal-content {
+	max-height: 200px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	color: white;
+	width: 96%;
+	-webkit-animation-name: slideIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: slideIn;
+	animation-duration: 0.4s
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  right: 10%;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close2 {
+  color: white;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  right: 10%;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+	text-align: center;
+  padding: 2px 16px;
+  color: white;
+}
+
+.modal-body {
+	min-width: 70%;
+	padding: 2px 10px;
+	background-color: purple;	
+}
+
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+.masko{
+	background-color: transparent;
+	z-index: -15;
+	height: 150px;
+}
+
+</style>
+</head>
+<body>
+<header>
+	<ul class="up">
+		<li><a id="one" href='Accueil.html'>Home Page</a></li>
+			<li><a id="two" href='Joker.html'>Joker</a></li>
+			<li><a id="three" href="Morgana.html">Morgana</a></li>
+			<li><a id="four" href="Mementos.html">Mementos</a></li>
+			<li><a id="five" href="Velvet Room.html">Velvet Room</a></li>
+			<li><a id="six" href="Your Phantom thief.html">Your page</a></li>
+			<li style="float:right"><a id="seven" href="Qui sommes nous.html">About us</a></li>
+	</ul>
+</header>
+<form id="child">
+    <input type="text" style="text-align: center;" id="prenom" name="prenom" placeholder="Who are you ?" required>
+    <p>Is that your answer ?</p>
+    <button onclick="Verify()" type="button">Yes</button>
+    <button type="reset">No</button>
+</form>
+<section>
+	<audio src="Aria.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
+
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">&times;</span>
+			<img style="height: 130%; width: 100%" src="igo.png">
+			</div>
+			<div class="modal-body">
+				<h1 style="font-family:'p5hattyregular'; font-size: 40px;">Well, look what we have here.</h1>
+				<p style="font-family:'p5hattyregular'; font-size: 30px;">didn't expected someone to come today but don't worry. Please have a seat.</p>
+			</div>
+		</div>
+	</div>
+	<div id="myModal2" class="modal" >
+		<!-- Modal content -->
+		<div class="modal-content" style="max-height: 400px;">
+			<div class="modal-header" style="min-width: 35%;">
+				<span class="close2">&times;</span>
+				<img style="max-height: 70%;" src="velvetb.png">
+			</div>
+			<div class="modal-body" style="min-width: 60%;">
+				<h2 class="break-long-words">"Welcome to the Velvet Room. This place exists between dream and reality, mind and matter." - Igor</h2>
+				<p class="break-long-words" style="font-size: 20px;">Present in every Persona games, the Velvet Room is described as a room located between consciousness and subconsciousness.<br>Despite the change of its appearance in every iteration, it always stays with its blue color but in Persona 5, the Velvet Room takes the form of a prison according to the general theme of the rules and society's expactations.<br>It is always managed by Igor, a bizarre old man with a long nose, pointed ears and bulging, bloodshot eyes. Despite the appearances, Igor seems to be quite tall and he stands up. Even if he's present in every games, not much is known about him and his presence in the Velvet Room<br> and let the player make the acquaintance of Caroline and Justine, the assistants of Igor, which act like your correctional officers and regularly call you Inmate.</p>
+			</div>
+		</div>
+	</div>
+	<img class="fighto" id="fighto" src="caro.png">
+	<img class="lefto" id="lefto" src="justi.png">
+	<img id="mid" src="igor.png">
+	<img id="velveto" class="masko"  src="velvetlogo.png">
+</section>
+<footer>
+	<div class="pied">Valérian Callot 2020 | <a href="Qui sommes nous.html">About us</a></div>
+</footer>
+</body>
+<script type="text/javascript">
+console.log("Enter Inmate");
+
+var table = 5;
+
+var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+
+var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
+
+let vlogo = document.getElementById("velveto");
+let truc = document.getElementById("child");
+let caroline = document.getElementById("fighto");
+let justine = document.getElementById("lefto");
+let igor = document.getElementById("mid");
+
+vlogo.style.display = "none";
+caroline.style.display = "none";
+justine.style.display = "none";
+igor.style.display = "none";
+
+function Verify(){
+	let surname = document.getElementById("prenom").value;
+	var expect = "Inmate";
+	var n = surname.localeCompare(expect);
+	if (n == 0) {
+		document.getElementById('prenom').value = '';
+		surname = '';
+		truc.style.display = "none";
+		document.body.style.backgroundImage = "url('velvet.png')";
+		justine.style.display = "block";
+		caroline.style.display = "block";
+		igor.style.display = "block";
+		vlogo.style.display = "block";
+		modal.style.display = "block";
+	} else {
+		alert("Who are you ?!");
+		document.getElementById('prenom').value = '';
+	}
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+velveto.onclick = function(){
+  if (muse.paused) {
+        muse.play();
+        }
+    else  {
+        muse.pause(); 
+        }
+}
+
+mid.onclick = function(){
+	modal2.style.display = "block";
+}
+
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+</script>
+<script typr="text/javascript" src="app.js"></script>
+</html>

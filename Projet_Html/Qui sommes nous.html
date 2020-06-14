@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>About us</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	body {
+		background: url(contact.png) no-repeat center center fixed;
+  		background-size: 100% 100%;
+  	}	
+  	ul {
+	background-color: #c31c1c;
+}
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.youtube {
+  background: red;
+  color: white;
+}
+
+.masko{
+	background-color: transparent;
+}
+</style>
+</head>
+<body>
+<header>
+	<ul class="up">
+		<li><a id="one" href='Accueil.html'>Home Page</a></li>
+			<li><a id="two" href='Joker.html'>Joker</a></li>
+			<li><a id="three" href="Morgana.html">Morgana</a></li>
+			<li><a id="four" href="Mementos.html">Mementos</a></li>
+			<li><a id="five" href="Velvet Room.html">Velvet Room</a></li>
+			<li><a id="six" href="Your Phantom thief.html">Your page</a></li>
+			<li style="float:right"><a id="seven" href="Qui sommes nous.html">About us</a></li>
+	</ul>
+	<img class="masko"  src="phantom.png">
+	<img id="sun" src="sun.gif">
+</header>
+
+<section>
+	<audio src="Bones.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
+	<div class="icon-bar">
+  <a href="https://www.facebook.com/AtlusWest/" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="https://twitter.com/atlus_west" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="https://www.youtube.com/user/AtlusUSA/" class="youtube"><i class="fa fa-youtube"></i></a> 
+</div>
+
+<button class="accordion">Page Creation</button>
+<div class="panel">
+  <p>This page have been entirely made by Valérian Callot, from the concept to the content.<br>The Layout of each page have been thought to represent to the best each details of the game with, for example, the transformation of Morgana when clicking on him or the organization in floors in the Mementos' page.<br>Some graphical parts have been retouched or made via Photoshop like the Backgroung for Joker or the Sun gif in respect of Persona 5 style.</p>
+  <img style="height: 200px; width: auto;" src="val.png">
+</div>
+
+<button class="accordion">Special Credits</button>
+<div class="panel">
+  <p>All Persona related content is owned by Atlus, and Sega Games Co., LTD.<br>This site and his creator have no affiliation with Atlus, or their parent company Sega Games Co., LTD.<br>Credits to HattyMikune and ToxicDevil who made the P5hattyregular font used in this site.<br><br></p>
+</div>
+
+</section>
+<footer>
+	<div class="pied">Valérian Callot 2020 | <a href="Qui sommes nous.html">About us</a></div>
+</footer>
+</body>
+<script type="text/javascript">
+var table = 7;
+var screen = document.getElementById("full");
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+<script typr="text/javascript" src="app.js"></script>
+</html>

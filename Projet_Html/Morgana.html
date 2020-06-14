@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>Morgana</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<style type="text/css">
+	header{
+		background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+	}
+	body {
+		background: url(stars.png) no-repeat center center fixed;
+  		background-size: 100% 100%;
+  	}	
+  	html{
+  		background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  	}
+  	ul {
+	background-color: #c31c1c;
+}
+section {
+	background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+.masko {
+  		height: 220px;
+  		width: auto;
+  	}	
+.modal-conten {
+	display: flex;
+	overflow: hidden;
+	color: white;
+	margin: auto;
+	width: 100%;
+	height: 63%;
+}
+
+</style>
+</head>
+<body>
+<header>
+	<ul class="up">
+		<li><a id="one" href='Accueil.html'>Home Page</a></li>
+			<li><a id="two" href='Joker.html'>Joker</a></li>
+			<li><a id="three" href="Morgana.html">Morgana</a></li>
+			<li><a id="four" href="Mementos.html">Mementos</a></li>
+			<li><a id="five" href="Velvet Room.html">Velvet Room</a></li>
+			<li><a id="six" href="Your Phantom thief.html">Your page</a></li>
+			<li style="float:right"><a id="seven" href="Qui sommes nous.html">About us</a></li>
+	</ul>
+	<img class="masko" id='chat' src="meow.png">
+	<img id="sun" src="sic.png">
+</header>
+<section>
+	<audio src="Alleycat.mp3" id="myAudio" loop="loop" autoplay="autoplay"></audio>
+	<div class="modal-conten">
+	<img id='morgana' onclick="change_image()" src='morgachat.png'>
+	<p id="description" class="break-long-words" style="padding-left: 30px; padding-top: 30px;">In the real world, Morgana is a black cat with blue eyes and one of the main protagonists. Despite being a cat, he is able to naturally communicate with every person that has at least been once in the Metaverse. he is amnesic and hates being treated like a cat.</p>
+</div>
+</section>
+<footer>
+	<div class="pied">Valérian Callot 2020 | <a href="Qui sommes nous.html">About us</a></div>
+</footer>
+</body>
+<script type="text/javascript">
+var table = 3;
+
+function change_image() {
+    var image = document.getElementById('morgana');
+    if (image.src.match("morgachat.png")) {
+        image.src = "morgaverse.png";
+        document.getElementById("description").innerHTML = "In the Metaverse, Morgana is a humanoid cat conserving its general aspect with his eyes and black fur but now wears a scarf, a belt and a mask. He doesn't possess any knowledge on the modern world and technology but he is well-informed on the Metaverse. Being the only one to have this knowledge, he will quickly act as a guide and sometimes as a guardian to the protagonist, reminding him to go to sleep. He is amnesiac and considers himself as a human being. Somehow he can also transform into a van in the Metaverse.";
+    } else {
+        image.src = "morgachat.png";
+        document.getElementById("description").innerHTML = "In the real world, Morgana is a black cat with blue eyes and one of the main protagonists. Despite being a cat, he is able to naturally communicate with every person that has at least been once in the Metaverse. he is amnesiac and hates being treated like a cat.";
+    }
+}
+</script>
+<script typr="text/javascript" src="app.js"></script>
+</html>
